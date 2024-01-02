@@ -1,40 +1,38 @@
-/* Importar la fuente Roboto de Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-/* Estilos generales de la aplicación */
 .App {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  background-color: #282C34;
-  font-family: 'Roboto', sans-serif; /* Usar la fuente Roboto */
 }
 
-/* Estilos del logo */
-.logo {
-  height: auto;
-  margin: 0% auto;
-  max-width: 80vw; /* Tamaño inicial del logo */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-/* Estilos del texto */
-.text {
-  color: #fff;
-  font-size: 3em;
-  line-height: 1.2; /* Reducir el espaciado entre líneas */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* Ajustes de tamaño del logo para diferentes tamaños de pantalla */
-@media screen and (min-width: 768px) {
-  .logo {
-    max-width: 60vw; /* Tamaño del logo para pantallas medianas */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .logo {
-    max-width: 40vw; /* Tamaño del logo para pantallas grandes */
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
