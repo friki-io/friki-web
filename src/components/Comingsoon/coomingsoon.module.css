@@ -1,0 +1,92 @@
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+.image-container { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: opacity 0.5s ease-in-out; /* Animación de opacidad */
+  }
+  
+.active {
+    /* z-index: 1;
+    opacity: 1; */
+    display: none;
+  }
+  
+ .image-container img {
+    
+    padding-top: 3rem;
+    width: 70%;
+    height: auto;
+    cursor: pointer;
+  }
+
+  
+  .text{
+      padding-top: 14rem;
+    }
+    
+    
+    /* ------------------- Animation------------------ */
+    
+    @keyframes circleAnimation {
+        0% {
+            background-color: yellow; /* Color inicial */
+            opacity: 1; /* Opacidad inicial */
+            transform: scale(0.5); /* Escala inicial (invisible) */
+        }
+        50% {
+            background-color: #ffdd00; /* Color intermedio */
+            opacity: 0.3; /* Opacidad intermedia */
+            transform: scale(2); /* Escala intermedia */
+        }
+        100% {
+            background-color: #ffffff; /* Color final */
+            opacity: 0; /* Opacidad final */
+            transform: scale(7); /* Escala final (círculo completo) */
+        }
+    }
+    
+    .circle {
+        width: 15rem;
+        height: 15rem;
+        margin-top: -310px;
+        margin-left: 1.5rem ;
+        border-radius: 100%;
+        background-color: rgb(241, 249, 8);
+        z-index: -1;
+        animation: circleAnimation 1s infinite ;
+        animation-timing-function: ease-in-out;
+        /* animation-iteration-count: 3; */
+    }
+    
+    @keyframes textAllAnimation {
+        0% {
+            opacity: 0; 
+            
+        }
+        70% {
+            opacity: 0.6; 
+            
+        }
+        100% {
+            opacity: 1; 
+        }
+    }
+    
+    
+    .text-all{
+        opacity: 0;
+        animation-name: textAllAnimation ;
+        animation-duration: 3s;
+        animation-delay: 2s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+    
