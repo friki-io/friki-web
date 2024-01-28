@@ -6,7 +6,7 @@ import style from './coomingsoon.module.css';
 // import PropTypes from 'prop-types'
 
 const Comingsoon = props => {
-    const { container, 'image-container': imageContainer, active, text, 'text-all': textAll ,circleContainer, circle, ...rest } = style;
+    const { container, 'image-container': imageContainer, active, text, 'text-all': textAll ,circleContainer, circle } = style;
 
     const [activeIndex, setActiveIndex] = useState(0);
 
